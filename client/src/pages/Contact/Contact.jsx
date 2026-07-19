@@ -1,6 +1,6 @@
 import "./Contact.css";
 
-import ContactForm from "../../components/ContactForm";
+// import ContactForm from "../../components/ContactForm";
 
 function Contact(){
 

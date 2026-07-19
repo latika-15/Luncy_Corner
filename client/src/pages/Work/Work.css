@@ -47,3 +47,21 @@ grid-row:span 2;
 grid-column:span 2;
 
 }
+
+.work-status {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work-status h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--coffee);
+}
+
+.work-status.error h2 {
+    color: #d33;
+}

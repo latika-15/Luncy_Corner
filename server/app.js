@@ -16,4 +16,16 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+
+res.json({
+
+success:true,
+
+message:"Welcome to Luncy Corner API"
+
+})
+
+})
+
 export default app;

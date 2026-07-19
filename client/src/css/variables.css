@@ -1,60 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ===========================
-   LUNCY CORNER DESIGN SYSTEM
-   =========================== */
-
 :root{
 
-    /* Background */
+    /* =========================
+       PRIMARY COLORS
+    ========================== */
 
     --bg:#FCF9F7;
     --surface:#FFFFFF;
 
-    /* Text */
+    /* =========================
+       TEXT
+    ========================== */
 
     --text:#312B2A;
     --text-light:#6F6967;
+    --text-soft:#9A9491;
 
-    /* Accent */
+    /* =========================
+       ACCENT COLORS
+    ========================== */
 
-    --pink:#F7DDE6;
-    --blue:#DDECF8;
+    --pink:#F6E5EB;
+    --pink-light:#FCF3F6;
+
+    --blue:#E5EFF9;
+    --blue-light:#F3F8FD;
+
     --coffee:#5A4742;
+    --coffee-light:#8A746D;
 
-    /* Border */
+    /* =========================
+       BORDERS
+    ========================== */
 
     --border:#ECE6E2;
+    --border-light:#F4EFEB;
 
-    /* Radius */
+    /* =========================
+       SHADOWS
+    ========================== */
+
+    --shadow-xs:0 4px 12px rgba(0,0,0,.03);
+
+    --shadow-sm:0 10px 25px rgba(0,0,0,.05);
+
+    --shadow-md:0 18px 45px rgba(0,0,0,.07);
+
+    --shadow-lg:0 30px 70px rgba(0,0,0,.09);
+
+    /* =========================
+       BORDER RADIUS
+    ========================== */
 
     --radius-sm:12px;
+
     --radius-md:18px;
+
     --radius-lg:28px;
+
+    --radius-xl:36px;
+
     --radius-round:999px;
 
-    /* Shadow */
+    /* =========================
+       SPACING
+    ========================== */
 
-    --shadow-sm:0 8px 20px rgba(0,0,0,.04);
+    --space-xs:8px;
+    --space-sm:16px;
+    --space-md:24px;
+    --space-lg:40px;
+    --space-xl:64px;
+    --space-2xl:96px;
+    --space-3xl:140px;
 
-    --shadow-md:0 18px 45px rgba(0,0,0,.06);
-
-    /* Container */
+    /* =========================
+       CONTAINER
+    ========================== */
 
     --container:1280px;
 
-    /* Transition */
+    /* =========================
+       TRANSITIONS
+    ========================== */
+
+    --transition-fast:.25s ease;
 
     --transition:.35s ease;
 
+    --transition-slow:.5s ease;
 
-  /* UI
-  --radius: 18px;
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  --transition: 0.35s ease;
-
-  /* Fonts */
-  /* --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
-  --font-button: "Poppins", sans-serif; */ 
 }

@@ -1,84 +1,87 @@
-/* ===========================
-   IMPORTS
-=========================== */
+@import url("./variables.css");
+@import url("./reset.css");
+@import url("./animations.css");
 
-@import "./variables.css";
-@import "./reset.css";
-@import "./animations.css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
 
-/* ===========================
-   GLOBAL STYLES
-=========================== */
+body{
 
-html {
-    scroll-behavior: smooth;
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"Manrope",sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+
 }
 
-/* Better text rendering */
-body {
-    font-family: var(--font-body);
-    background-color: var(--cream);
-    color: var(--coffee);
+.container{
 
-    line-height: 1.6;
+    width:min(90%,var(--container));
 
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    margin:auto;
+
 }
 
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    color: var(--coffee);
-    font-weight: 600;
-    line-height: 1.2;
+.section{
+
+    padding:120px 0;
+
 }
 
-/* Paragraphs */
-p {
-    color: var(--gray);
+.title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,7vw,6rem);
+
+    line-height:1;
+
+    font-weight:600;
+
 }
 
-/* Buttons */
-button,
-.btn {
-    font-family: var(--font-button);
-    transition: var(--transition);
+.subtitle{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-top:24px;
+
+    max-width:580px;
+
 }
 
-/* Inputs */
-input,
-textarea,
-select {
-    font-family: var(--font-body);
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:42px;
+
+    padding:18px 34px;
+
+    background:var(--coffee);
+
+    color:white;
+
+    border-radius:999px;
+
+    transition:var(--transition);
+
 }
 
-/* Selection color */
-::selection {
-    background: var(--pink);
-    color: var(--coffee);
-}
+.btn:hover{
 
-/* Scrollbar (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-    width: 8px;
-}
+    transform:translateY(-4px);
 
-::-webkit-scrollbar-track {
-    background: var(--cream);
-}
+    box-shadow:var(--shadow-md);
 
-::-webkit-scrollbar-thumb {
-    background: var(--pink);
-    border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #efc9d4;
 }

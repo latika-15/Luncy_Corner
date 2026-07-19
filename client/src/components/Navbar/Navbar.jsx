@@ -1,38 +1,46 @@
-import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  return (
-    <nav className="navbar">
 
-      <h2 className="logo">Latika.</h2>
+    return (
 
-      <ul className="nav-links">
+        <header className="navbar">
 
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
+            <div className="container nav-wrapper">
 
-        <li>
-          <NavLink to="/projects">Projects</NavLink>
-        </li>
+                <Link to="/" className="logo">
 
-        <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
+                    <span>LUNCY</span>
 
-        <li>
-          <NavLink to="/testimonials">Testimonials</NavLink>
-        </li>
+                    <small>CORNER</small>
 
-        <li>
-          <NavLink to="/contact">Contact</NavLink>
-        </li>
+                </Link>
 
-      </ul>
+                <nav>
 
-    </nav>
-  );
+                    <ul>
+
+                        <li><Link to="/">Home</Link></li>
+
+                        <li><Link to="/work">Work</Link></li>
+
+                        <li><Link to="/about">About</Link></li>
+
+                        <li><Link to="/testimonials">Testimonials</Link></li>
+
+                        <li><Link to="/contact">Contact</Link></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+    );
+
 }
 
 export default Navbar;

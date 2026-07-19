@@ -1,64 +1,41 @@
-/* ===========================
-   CSS RESET
-=========================== */
-
 *,
 *::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Improve scrolling */
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-/* Body defaults */
-body {
-    min-height: 100vh;
+body{
+    overflow-x:hidden;
 }
 
-/* Media */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
+img{
+    display:block;
+    max-width:100%;
 }
 
-/* Forms */
-input,
 button,
-textarea,
-select {
-    font: inherit;
+input,
+textarea{
+    font:inherit;
 }
 
-/* Buttons */
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
+button{
+    cursor:pointer;
+    border:none;
+    background:none;
 }
 
-/* Lists */
-ul,
-ol {
-    list-style: none;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Tables */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+ul{
+    list-style:none;
 }

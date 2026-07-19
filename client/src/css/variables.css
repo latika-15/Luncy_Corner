@@ -1,22 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root {
-  /* Colors */
-  --pink: #F8DDE2;
-  --blue: #DCEEFF;
-  --cream: #FFF8F3;
-  --coffee: #2C2625;
-  --black: #181818;
-  --white: #FFFFFF;
-  --gray: #777777;
+/* ===========================
+   LUNCY CORNER DESIGN SYSTEM
+   =========================== */
 
-  /* UI */
+:root{
+
+    /* Background */
+
+    --bg:#FCF9F7;
+    --surface:#FFFFFF;
+
+    /* Text */
+
+    --text:#312B2A;
+    --text-light:#6F6967;
+
+    /* Accent */
+
+    --pink:#F7DDE6;
+    --blue:#DDECF8;
+    --coffee:#5A4742;
+
+    /* Border */
+
+    --border:#ECE6E2;
+
+    /* Radius */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:28px;
+    --radius-round:999px;
+
+    /* Shadow */
+
+    --shadow-sm:0 8px 20px rgba(0,0,0,.04);
+
+    --shadow-md:0 18px 45px rgba(0,0,0,.06);
+
+    /* Container */
+
+    --container:1280px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+
+  /* UI
   --radius: 18px;
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   --transition: 0.35s ease;
 
   /* Fonts */
-  --font-heading: "Cormorant Garamond", serif;
+  /* --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
-  --font-button: "Poppins", sans-serif;
+  --font-button: "Poppins", sans-serif; */ 
 }

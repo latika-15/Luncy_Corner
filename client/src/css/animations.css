@@ -1,33 +1,25 @@
-/* ===========================
-   GLOBAL ANIMATIONS
-=========================== */
+@keyframes fadeUp{
 
-.fade-up {
-    animation: fadeUp .8s ease forwards;
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
-.fade-in {
-    animation: fadeIn .8s ease forwards;
-}
+.fade-up{
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+    animation:fadeUp .8s ease forwards;
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }

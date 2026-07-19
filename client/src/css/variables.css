@@ -91,4 +91,11 @@
 
     --transition-slow:.5s ease;
 
+    
+/* Button Shadow */
+--btn-shadow: 0 12px 24px rgba(44, 38, 37, 0.12);
+
+/* Focus */
+--focus-ring: 0 0 0 5px rgba(44, 38, 37, 0.08);
+
 }

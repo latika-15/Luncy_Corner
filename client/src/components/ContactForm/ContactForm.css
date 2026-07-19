@@ -1,0 +1,307 @@
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact-form-section{
+
+padding:7rem 0;
+
+}
+
+.contact-heading{
+
+max-width:42rem;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:4rem;
+
+}
+
+.contact-heading h2{
+
+font-size:3rem;
+
+margin-bottom:1rem;
+
+}
+
+.contact-heading p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.contact-form{
+
+background:var(--white);
+
+padding:3rem;
+
+border-radius:2rem;
+
+box-shadow:var(--shadow);
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:1.5rem;
+
+margin-bottom:1.5rem;
+
+}
+
+.form-group{
+
+display:flex;
+
+flex-direction:column;
+
+gap:.65rem;
+
+}
+
+.form-group label{
+
+font-family:var(--font-button);
+
+font-size:.95rem;
+
+font-weight:500;
+
+color:var(--coffee);
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.form-group input,
+
+.form-group textarea,
+
+.form-group select{
+
+width:100%;
+
+padding:1rem 1.2rem;
+
+border:1px solid var(--border);
+
+background:var(--surface);
+
+border-radius:1rem;
+
+font-family:var(--font-body);
+
+font-size:.95rem;
+
+color:var(--coffee);
+
+transition:var(--transition);
+
+outline:none;
+
+}
+
+.form-group textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
+
+.form-group input:focus,
+
+.form-group textarea:focus,
+
+.form-group select:focus{
+
+border-color:var(--coffee);
+
+box-shadow:var(--focus-ring);
+
+background:white;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.submit-btn{
+
+margin-top:2rem;
+
+width:100%;
+
+height:58px;
+
+border-radius:999px;
+
+background:var(--coffee);
+
+color:white;
+
+font-family:var(--font-button);
+
+font-size:1rem;
+
+font-weight:500;
+
+transition:var(--transition);
+
+}
+
+.submit-btn:hover{
+
+transform:translateY(-3px) scale(1.01);
+
+box-shadow:var(--btn-shadow);
+
+background:#3b3331;
+
+}
+
+.submit-btn:active{
+
+transform:scale(.98);
+
+}
+
+.submit-btn:disabled{
+
+opacity:.75;
+
+cursor:not-allowed;
+
+transform:none;
+
+box-shadow:none;
+
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.form-error{
+
+margin-top:1rem;
+
+padding:1rem;
+
+border-radius:1rem;
+
+background:#FFF4F4;
+
+color:#B42318;
+
+}
+
+/* ===========================
+   SUCCESS CARD
+=========================== */
+
+.success-card{
+
+max-width:620px;
+
+margin:6rem auto;
+
+padding:4rem;
+
+background:white;
+
+border-radius:2rem;
+
+text-align:center;
+
+box-shadow:var(--shadow);
+
+animation:fadeIn .6s ease;
+
+}
+
+.success-icon{
+
+font-size:3rem;
+
+margin-bottom:1.5rem;
+
+color:var(--coffee);
+
+}
+
+.success-card h2{
+
+font-size:3rem;
+
+margin-bottom:1rem;
+
+}
+
+.success-card p{
+
+color:var(--gray);
+
+line-height:1.9;
+
+margin-bottom:2.5rem;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-form{
+
+padding:2rem;
+
+}
+
+.contact-heading h2{
+
+font-size:2.3rem;
+
+}
+
+.success-card{
+
+padding:2.5rem;
+
+}
+
+}

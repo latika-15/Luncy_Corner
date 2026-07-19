@@ -1,8 +1,8 @@
 import { useState } from "react";
+import StarRating from "../StarRating/StarRating";
 import { submitReview } from "../../services/testimonialService";
-import TestimonialSuccess from "./TestimonialSuccess";
 
-export default function TestimonialForm({ clientName, code }) {
+export default function TestimonialForm({ client, code }) {
   const [rating, setRating] = useState(5);
   const [message, setMessage] = useState("");
 
@@ -10,13 +10,8 @@ export default function TestimonialForm({ clientName, code }) {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-
-    if (message.trim().length < 20) {
-      setError("Please write at least 20 characters.");
-      return;
-    }
 
     setLoading(true);
     setError("");
@@ -29,78 +24,96 @@ export default function TestimonialForm({ clientName, code }) {
       });
 
       setSuccess(true);
-
-      setMessage("");
-      setRating(5);
     } catch (err) {
-      setError(err.message || "Something went wrong.");
+      setError(
+        err?.response?.data?.message ||
+          err.message ||
+          "Something went wrong."
+      );
     } finally {
       setLoading(false);
     }
-  };
+  }
 
+  if (success) {
+    return (
+      <section className="success-card">
 
+        <div className="success-icon">
+          ✓
+        </div>
 
-if(success){
+        <h3>Thank You!</h3>
 
-return(
+        <p>
+          Your testimonial has been submitted successfully.
+          Thank you for taking the time to share your experience.
+        </p>
 
-<TestimonialSuccess
-
-clientName={clientName}
-
-/>
-
-)
-
-}
+      </section>
+    );
+  }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="testimonial-form"
-    >
-      <h3>Share your experience</h3>
+    <section className="testimonial-form">
 
-      <p className="review-subtitle">
-        Your feedback helps future clients know what it's like working with Luncy Corner.
+      <h2>Write Your Experience</h2>
+
+      <p>
+        Thank you, <strong>{client.clientName}</strong>.
+        Your feedback helps build trust and allows future clients
+        to understand what it's like working with Luncy Corner.
       </p>
 
-      <div className="rating">
-       <StarRating
+      <form onSubmit={handleSubmit}>
 
-rating={rating}
+        <label>
 
-onChange={setRating}
+          Overall Rating
 
-/>
-      </div>
+          <div className="rating-wrapper">
 
-      <p className="rating-text">
-        {rating} / 5 Stars
-      </p>
+            <StarRating
+              rating={rating}
+              onChange={setRating}
+            />
 
-      <textarea
-        rows="6"
-        placeholder="Tell others about your experience working with Luncy Corner..."
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
-      />
+          </div>
 
-      {error && (
-        <p className="error">
-          {error}
-        </p>
-      )}
+        </label>
 
-      <button
-        type="submit"
-        disabled={loading}
-      >
-        {loading ? "Submitting..." : "Submit Review"}
-      </button>
+        <label>
 
-    </form>
+          Your Testimonial
+
+          <textarea
+            placeholder="Tell us about your experience working together..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+
+        </label>
+
+        {error && (
+
+          <div className="form-error">
+
+            {error}
+
+          </div>
+
+        )}
+
+        <button
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Submitting..." : "Submit Testimonial"}
+        </button>
+
+      </form>
+
+    </section>
   );
 }

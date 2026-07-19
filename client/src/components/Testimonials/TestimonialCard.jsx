@@ -1,35 +1,45 @@
+import "./Testimonials.css";
+import StarRating from "../StarRating/StarRating";
+
 export default function TestimonialCard({ testimonial }) {
+  return (
+    <article className="testimonial-card">
 
-    return (
+      <div className="review-badge">
+        ♡
+      </div>
 
-        <article className="testimonial-card">
+      <div className="stars">
+        <StarRating
+          rating={testimonial.rating}
+          readonly
+        />
+      </div>
 
-            <div className="stars">
+      <p className="review">
+        "{testimonial.message}"
+      </p>
 
-                <StarRating
+      <div className="client">
 
-rating={testimonial.rating}
+        <div className="client-avatar">
+          {testimonial.clientName.charAt(0).toUpperCase()}
+        </div>
 
-readonly
+        <div className="client-info">
 
-/>
+          <h4>
+            {testimonial.clientName}
+          </h4>
 
-            </div>
+          <span>
+            Verified Client
+          </span>
 
-            <p className="review">
+        </div>
 
-                "{testimonial.message}"
+      </div>
 
-            </p>
-
-            <h4>
-
-                — {testimonial.clientName}
-
-            </h4>
-
-        </article>
-
-    );
-
+    </article>
+  );
 }

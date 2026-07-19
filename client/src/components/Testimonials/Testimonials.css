@@ -1,20 +1,91 @@
+.testimonial-hero{
+
+padding:120px 0 90px;
+
+text-align:center;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+.testimonial-hero span{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:var(--pink);
+
+border-radius:999px;
+
+margin-bottom:24px;
+
+font-size:14px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+}
+
+.testimonial-hero h1{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:72px;
+
+font-weight:500;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+.testimonial-hero p{
+
+max-width:650px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:var(--text-light);
+
+}
+
+
 .review-verification{
 
-max-width:700px;
+display:grid;
 
-margin:120px auto;
+grid-template-columns:
 
-padding:60px;
+1fr
 
-background:var(--surface);
+420px;
 
-border:1px solid var(--border);
+gap:60px;
 
-border-radius:30px;
+align-items:center;
+
+padding:80px;
+
+border-radius:40px;
+
+background:linear-gradient(
+135deg,
+#fff,
+#FCFBFF
+);
 
 box-shadow:var(--shadow-md);
 
-text-align:center;
+margin-top:120px;
 
 }
 
@@ -22,29 +93,24 @@ text-align:center;
 
 display:flex;
 
-gap:16px;
+flex-direction:column;
 
-margin-top:30px;
+gap:18px;
 
 }
-
 .verify-box input{
 
-flex:1;
+height:62px;
 
-height:58px;
+padding:0 24px;
 
-border-radius:999px;
+border-radius:18px;
 
-padding:0 25px;
+font-size:16px;
+
+background:#fff;
 
 border:1px solid var(--border);
-
-background:white;
-
-font-size:15px;
-
-transition:var(--transition);
 
 }
 
@@ -58,19 +124,13 @@ box-shadow:0 0 0 6px rgba(90,71,66,.08);
 
 .verify-box button{
 
-padding:0 34px;
+height:58px;
 
-border:none;
+border-radius:18px;
 
-border-radius:999px;
+font-weight:600;
 
-background:var(--coffee);
-
-color:white;
-
-cursor:pointer;
-
-transition:var(--transition);
+letter-spacing:.04em;
 
 }
 
@@ -140,31 +200,72 @@ align-items:start;
 
 .testimonial-card{
 
-padding:34px;
+position:relative;
+
+overflow:hidden;
+
+padding:42px;
 
 background:linear-gradient(
-
-180deg,
-
-var(--surface),
-
-var(--blue-light)
-
+135deg,
+#ffffff,
+#F9FBFD
 );
 
-border-radius:28px;
+border-radius:32px;
 
-border:1px solid var(--border);
+border:1px solid rgba(255,255,255,.7);
 
-transition:var(--transition);
+backdrop-filter:blur(18px);
 
-box-shadow:var(--shadow-sm);
+box-shadow:0 30px 70px rgba(0,0,0,.07);
+
+}
+.testimonial-card::before{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+
+height:250px;
+
+right:-120px;
+
+top:-120px;
+
+border-radius:50%;
+
+background:rgba(247,221,230,.35);
 
 }
 
-.testimonial-card:nth-child(even){
+.testimonial-card:nth-child(3n){
 
-transform:translateY(35px);
+margin-top:80px;
+
+}
+
+.testimonial-card:nth-child(2){
+
+margin-top:35px;
+
+}
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:
+
+1fr
+
+1fr;
+
+gap:34px;
+
+margin-top:70px;
 
 }
 
@@ -175,26 +276,33 @@ transform:translateY(-8px);
 box-shadow:var(--shadow-md);
 
 }
-
 .stars{
 
-font-size:22px;
+display:flex;
 
-color:var(--coffee);
+justify-content:center;
 
-margin-bottom:18px;
+gap:12px;
+
+font-size:26px;
+
+margin-bottom:24px;
+
+color:#7B5C47;
 
 }
 
 .review{
 
-line-height:1.8;
+font-size:22px;
 
-color:var(--text-light);
+line-height:2;
 
-margin-bottom:24px;
+font-family:
 
-font-style:italic;
+"Cormorant Garamond",
+
+serif;
 
 }
 
@@ -457,6 +565,1600 @@ color:var(--text-light);
 line-height:1.8;
 
 }
+
+.testimonials-page{
+
+padding-bottom:180px;
+
+}
+
+
+/* ==========================================
+   PREMIUM TESTIMONIAL GRID
+========================================== */
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:42px;
+
+    margin-top:90px;
+
+    align-items:start;
+
+}
+
+/* Pinterest effect */
+
+.testimonial-card:nth-child(2){
+
+    margin-top:70px;
+
+}
+
+.testimonial-card:nth-child(4){
+
+    margin-top:50px;
+
+}
+
+.testimonial-card:nth-child(5){
+
+    margin-top:100px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.testimonial-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:50px;
+
+    border-radius:34px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.96),
+        rgba(250,250,250,.90)
+    );
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+
+    0 15px 50px rgba(0,0,0,.05),
+
+    0 35px 90px rgba(0,0,0,.06);
+
+    transition:.45s ease;
+
+}
+
+.testimonial-card:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+
+    0 25px 80px rgba(0,0,0,.08),
+
+    0 45px 120px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   Decorative Circle
+========================================== */
+
+.testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    rgba(247,225,233,.8),
+
+    transparent 70%
+
+    );
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.testimonial-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(233,243,252,.45);
+
+    bottom:-60px;
+
+    left:-60px;
+
+}
+
+/* ==========================================
+   Stars
+========================================== */
+
+.stars{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:34px;
+
+    font-size:28px;
+
+    color:#7B5C47;
+
+}
+
+.stars span{
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover .stars span{
+
+    transform:scale(1.12);
+
+}
+
+/* ==========================================
+   Quote
+========================================== */
+
+.review{
+
+    position:relative;
+
+    z-index:2;
+
+    font-family:
+
+    "Cormorant Garamond",
+
+    serif;
+
+    font-size:28px;
+
+    line-height:1.8;
+
+    color:#322B28;
+
+    margin-bottom:45px;
+
+}
+
+.review::before{
+
+    content:"“";
+
+    position:absolute;
+
+    left:-15px;
+
+    top:-35px;
+
+    font-size:110px;
+
+    color:#EFE7E2;
+
+    font-family:serif;
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   Client
+========================================== */
+
+.client{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.client-avatar{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #EAF4FD,
+
+    #F8EAF2
+
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    color:#5A4742;
+
+    font-size:22px;
+
+}
+
+.client-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.client-info h4{
+
+    font-family:
+
+    "Cormorant Garamond",
+
+    serif;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    color:#2F2826;
+
+}
+
+.client-info span{
+
+    color:#9B928E;
+
+    font-size:15px;
+
+    letter-spacing:.08em;
+
+}
+
+/* ==========================================
+   Floating Badge
+========================================== */
+
+.review-badge{
+
+    position:absolute;
+
+    top:35px;
+
+    right:35px;
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+
+    0 8px 24px rgba(0,0,0,.08);
+
+    color:#D8B673;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   REVIEW VERIFICATION
+========================================== */
+
+.review-verification{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:160px;
+
+    padding:90px 80px;
+
+    border-radius:42px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.96),
+        rgba(250,249,248,.94)
+    );
+
+    backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 30px 90px rgba(0,0,0,.06),
+
+        0 10px 35px rgba(0,0,0,.04);
+
+}
+
+/* Decorative Background */
+
+.review-verification::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:#F8EEF3;
+
+    top:-160px;
+
+    right:-140px;
+
+    filter:blur(20px);
+
+    opacity:.8;
+
+}
+
+.review-verification::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:#EAF5FD;
+
+    bottom:-120px;
+
+    left:-120px;
+
+    filter:blur(25px);
+
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.review-verification h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:52px;
+
+    font-weight:500;
+
+    color:#2F2826;
+
+    margin-bottom:18px;
+
+}
+
+.review-verification>p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#8A827D;
+
+    margin-bottom:55px;
+
+}
+
+/* ==========================================
+   Verify Box
+========================================== */
+
+.verify-box{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+/* Input */
+
+.verify-box input{
+
+    flex:1;
+
+    min-width:300px;
+
+    height:66px;
+
+    padding:0 28px;
+
+    border-radius:18px;
+
+    border:1px solid #ECE8E5;
+
+    background:white;
+
+    font-size:16px;
+
+    color:#4D4541;
+
+    transition:.35s;
+
+}
+
+.verify-box input::placeholder{
+
+    color:#B3ABA6;
+
+    letter-spacing:.08em;
+
+}
+
+.verify-box input:focus{
+
+    outline:none;
+
+    border-color:#5A4742;
+
+    box-shadow:
+
+    0 0 0 6px rgba(90,71,66,.08);
+
+}
+
+/* Button */
+
+.verify-box button{
+
+    height:66px;
+
+    padding:0 42px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#3E322D;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.verify-box button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 35px rgba(62,50,45,.25);
+
+}
+
+.verify-box button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* ==========================================
+   VERIFIED CARD
+========================================== */
+
+.verified-box{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:50px;
+
+    padding:50px;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    #FFF,
+
+    #FBFCFD
+
+    );
+
+    border:1px solid #F0ECE8;
+
+    text-align:center;
+
+}
+
+.verified-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #EAF5FD,
+
+    #F8EEF3
+
+    );
+
+    font-size:34px;
+
+    color:#3E322D;
+
+}
+
+.verified-box h3{
+
+    font-family:
+
+    "Cormorant Garamond",
+
+    serif;
+
+    font-size:40px;
+
+    font-weight:500;
+
+    color:#2E2725;
+
+    margin-bottom:15px;
+
+}
+
+.verified-box p{
+
+    color:#8A827D;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.error{
+
+    margin-top:28px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:#FFF5F6;
+
+    border:1px solid #FFD9DD;
+
+    color:#C44B62;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.review-divider{
+
+    width:90px;
+
+    height:2px;
+
+    margin:55px auto;
+
+    background:#DCC7AF;
+
+}
+
+/* ==========================================
+   TESTIMONIAL FORM
+========================================== */
+
+.testimonial-form{
+
+    margin-top:80px;
+
+    padding:70px;
+
+    border-radius:40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.98),
+        rgba(250,249,248,.94)
+    );
+
+    backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+    0 30px 90px rgba(0,0,0,.06),
+
+    0 12px 35px rgba(0,0,0,.04);
+
+}
+
+/* Decorative Gradient */
+
+.testimonial-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:#F8EEF3;
+
+    top:-120px;
+
+    right:-120px;
+
+    filter:blur(30px);
+
+}
+
+.testimonial-form::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:#EAF5FD;
+
+    bottom:-120px;
+
+    left:-120px;
+
+    filter:blur(35px);
+
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.testimonial-form h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:50px;
+
+    font-weight:500;
+
+    color:#2F2826;
+
+    margin-bottom:15px;
+
+}
+
+.testimonial-form p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#8A827D;
+
+    line-height:1.9;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================================
+   Form Layout
+========================================== */
+
+.testimonial-form form{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/* ==========================================
+   Labels
+========================================== */
+
+.testimonial-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    font-weight:600;
+
+    color:#4A403C;
+
+    font-size:15px;
+
+    letter-spacing:.04em;
+
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+.testimonial-form input,
+
+.testimonial-form textarea{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:20px 24px;
+
+    border-radius:18px;
+
+    background:white;
+
+    border:1px solid #ECE8E5;
+
+    font-size:16px;
+
+    color:#4A403C;
+
+    transition:.35s;
+
+}
+
+.testimonial-form input:focus,
+
+.testimonial-form textarea:focus{
+
+    border-color:#5B4741;
+
+    box-shadow:
+
+    0 0 0 6px rgba(91,71,65,.08);
+
+}
+
+.testimonial-form textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   Placeholder
+========================================== */
+
+.testimonial-form input::placeholder,
+
+.testimonial-form textarea::placeholder{
+
+    color:#B0A9A4;
+
+}
+
+/* ==========================================
+   Submit Button
+========================================== */
+
+.testimonial-form button{
+
+    align-self:flex-start;
+
+    padding:18px 46px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#3D312C;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.testimonial-form button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 20px 40px rgba(61,49,44,.22);
+
+}
+
+.testimonial-form button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/* ==========================================
+   Success Card
+========================================== */
+
+.success-card{
+
+    margin-top:60px;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:white;
+
+    border:1px solid #EFE9E5;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.05);
+
+}
+
+.success-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #EAF5FD,
+
+    #F8EEF3
+
+    );
+
+    font-size:36px;
+
+    color:#3E322D;
+
+}
+
+.success-card h3{
+
+    font-family:
+
+    "Cormorant Garamond",
+
+    serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+    color:#2F2826;
+
+}
+
+.success-card p{
+
+    color:#8A827D;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================
+   Error
+========================================== */
+
+.form-error{
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:#FFF5F6;
+
+    border:1px solid #FFD7DC;
+
+    color:#C74E65;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.form-divider{
+
+    width:90px;
+
+    height:2px;
+
+    background:#D9C1A3;
+
+    margin:55px auto;
+
+}
+
+/* ==========================================
+   STAR RATING
+========================================== */
+
+.stars{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:8px;
+
+    margin-bottom:28px;
+
+}
+
+.stars svg{
+
+    width:22px;
+
+    height:22px;
+
+    transition:.3s ease;
+
+    color:#D2A65A;
+
+}
+
+.testimonial-card:hover .stars svg{
+
+    transform:scale(1.12);
+
+}
+
+/* ==========================================
+   INPUT TRANSITIONS
+========================================== */
+
+.verify-box input,
+.testimonial-form input,
+.testimonial-form textarea{
+
+    transition:
+
+        border-color .35s ease,
+
+        box-shadow .35s ease,
+
+        transform .35s ease;
+
+}
+
+.verify-box input:focus,
+.testimonial-form input:focus,
+.testimonial-form textarea:focus{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   BUTTON EFFECTS
+========================================== */
+
+.verify-box button,
+.testimonial-form button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.verify-box button::before,
+.testimonial-form button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.28),
+            transparent
+        );
+
+    transition:.7s;
+
+}
+
+.verify-box button:hover::before,
+.testimonial-form button:hover::before{
+
+    left:120%;
+
+}
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.testimonial-card{
+
+    animation:cardFade .8s ease both;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   VERIFIED ANIMATION
+========================================== */
+
+.verified-box,
+.success-card{
+
+    animation:pop .45s ease;
+
+}
+
+@keyframes pop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   IMAGE / AVATAR HOVER
+========================================== */
+
+.client-avatar{
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover .client-avatar{
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+
+/* ==========================================
+   SCROLL SPACING
+========================================== */
+
+.review-section{
+
+    scroll-margin-top:120px;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:1024px){
+
+.testimonial-grid{
+
+    grid-template-columns:1fr;
+
+    gap:34px;
+
+}
+
+.testimonial-card:nth-child(2),
+.testimonial-card:nth-child(4),
+.testimonial-card:nth-child(5){
+
+    margin-top:0;
+
+}
+
+.testimonial-hero h1{
+
+    font-size:60px;
+
+}
+
+.review-verification{
+
+    padding:60px;
+
+}
+
+.testimonial-form{
+
+    padding:60px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.testimonial-hero{
+
+    padding:100px 0 70px;
+
+}
+
+.testimonial-hero h1{
+
+    font-size:44px;
+
+}
+
+.testimonial-hero p{
+
+    font-size:16px;
+
+}
+
+.section-heading h2{
+
+    font-size:40px;
+
+}
+
+.review-verification{
+
+    padding:40px 28px;
+
+    border-radius:28px;
+
+}
+
+.testimonial-form{
+
+    padding:40px 28px;
+
+    border-radius:28px;
+
+}
+
+.testimonial-card{
+
+    padding:34px;
+
+    border-radius:28px;
+
+}
+
+.review{
+
+    font-size:22px;
+
+}
+
+.client-info h4{
+
+    font-size:24px;
+
+}
+
+.verify-box{
+
+    flex-direction:column;
+
+}
+
+.verify-box input{
+
+    width:100%;
+
+    min-width:100%;
+
+}
+
+.verify-box button{
+
+    width:100%;
+
+}
+
+.testimonial-form button{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:480px){
+
+.testimonials-container{
+
+    width:92%;
+
+}
+
+.testimonial-hero h1{
+
+    font-size:36px;
+
+}
+
+.review{
+
+    font-size:20px;
+
+}
+
+.client{
+
+    gap:14px;
+
+}
+
+.client-avatar{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:18px;
+
+}
+
+.review-verification h2,
+.testimonial-form h2{
+
+    font-size:34px;
+
+}
+
+.review-verification,
+.testimonial-form{
+
+    padding:28px 22px;
+
+}
+
+.success-card{
+
+    padding:34px 24px;
+
+}
+
+}
+
+/* ==========================================
+   SMOOTH PAGE FADE
+========================================== */
+
+.testimonials-page{
+
+    animation:pageFade 1s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.testimonials-page ::selection{
+
+    background:#D9B894;
+
+    color:white;
+
+}
+
+
+/* Rating */
+
+.rating-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+}
+
+.rating-wrapper .star-rating{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.rating-wrapper svg{
+
+    width:34px;
+
+    height:34px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:#D4A759;
+
+}
+
+.rating-wrapper svg:hover{
+
+    transform:scale(1.2);
+
+}
+
+/* Textarea */
+
+.testimonial-form textarea{
+
+    min-height:200px;
+
+}
+
 
 
 

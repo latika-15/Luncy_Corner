@@ -1,87 +1,69 @@
 import dotenv from "dotenv";
-import mongoose from "mongoose";
-
 import connectDB from "../config/db.js";
 import Project from "../models/Project.js";
 
 dotenv.config();
 
-const projects = [
-  {
-    title: "Cafe Aroma",
-    slug: "cafe-aroma",
-    category: "Brand Identity",
-    description:
-      "A modern café branding project featuring a warm, elegant and minimal visual identity.",
+await connectDB();
 
-    thumbnail:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+await Project.deleteMany();
 
-    gallery: [
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
-      "https://images.unsplash.com/photo-1447933601403-0c6688de566e"
-    ],
+await Project.create({
 
-    tools: [
-      "Canva",
-      "Photoshop"
-    ],
+title:"Cafe Aroma",
 
-    year: 2026,
+slug:"cafe-aroma",
 
-    featured: true
-  },
+category:"Brand Identity",
 
-  {
-    title: "Bloom Fashion",
+shortDescription:"A warm and modern coffee branding project.",
 
-    slug: "bloom-fashion",
+fullDescription:"Designed a complete branding identity including logo, menu, packaging and Instagram creatives.",
 
-    category: "Instagram Design",
+thumbnail:"/projects/cafe/thumb.jpg",
 
-    description:
-      "Luxury fashion social media branding with soft pastel aesthetics.",
+coverImage:"/projects/cafe/cover.jpg",
 
-    thumbnail:
-      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+gallery:[
 
-    gallery: [],
+"/projects/cafe/1.jpg",
 
-    tools: [
-      "Canva"
-    ],
+"/projects/cafe/2.jpg",
 
-    year: 2026,
+"/projects/cafe/3.jpg"
 
-    featured: false
-  }
+],
 
-];
+colors:[
 
-const seedProjects = async () => {
+"#F6E8DC",
 
-    try{
+"#4B352A",
 
-        await connectDB();
+"#DDB892"
 
-        await Project.deleteMany();
+],
 
-        await Project.insertMany(projects);
+fonts:[
 
-        console.log("✅ Projects Seeded");
+"Cormorant Garamond",
 
-        process.exit();
+"Inter"
 
-    }
+],
 
-    catch(error){
+tools:[
 
-        console.log(error);
+"Canva",
 
-        process.exit(1);
+"Photoshop"
 
-    }
+],
 
-}
+featured:true
 
-seedProjects();
+});
+
+console.log("Projects Seeded");
+
+process.exit();

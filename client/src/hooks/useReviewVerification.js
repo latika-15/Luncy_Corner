@@ -1,41 +1,33 @@
 import { useState } from "react";
-import { verifyCode } from "../services/testimonialService";
+import { verifyReviewCode } from "../services/testimonialService";
 
-export default function useReviewVerification(){
+export default function useReviewVerification() {
 
-    const [code,setCode]=useState("");
+    const [loading, setLoading] = useState(false);
+    const [verified, setVerified] = useState(false);
+    const [client, setClient] = useState(null);
+    const [error, setError] = useState("");
 
-    const [loading,setLoading]=useState(false);
+    async function verify(code) {
 
-    const [verified,setVerified]=useState(false);
+        try {
 
-    const [clientName,setClientName]=useState("");
+            setLoading(true);
+            setError("");
 
-    const [error,setError]=useState("");
-
-    const verify=async()=>{
-
-        setLoading(true);
-
-        setError("");
-
-        try{
-
-            const data=await verifyCode(code);
+            const data = await verifyReviewCode(code);
 
             setVerified(true);
 
-            setClientName(data.clientName);
+            setClient(data);
 
-        }
+        } catch (err) {
 
-        catch(err){
+            setVerified(false);
 
             setError(err.message);
 
-        }
-
-        finally{
+        } finally {
 
             setLoading(false);
 
@@ -43,22 +35,18 @@ export default function useReviewVerification(){
 
     }
 
-    return{
+    return {
 
-        code,
-
-        setCode,
+        verify,
 
         verified,
 
-        clientName,
+        client,
 
         loading,
 
-        error,
+        error
 
-        verify
-
-    }
+    };
 
 }

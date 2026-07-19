@@ -1,18 +1,30 @@
+import { useState, useEffect } from "react";
 import useReviewVerification from "../../hooks/useReviewVerification";
-import "./Testimonials.css";
 
-import TestimonialForm from "./TestimonialForm";
-export default function ReviewVerification() {
+export default function ReviewVerification({ onVerified }) {
+  const [code, setCode] = useState("");
 
   const {
-    code,
-    setCode,
     verify,
+    verified,
+    client,
     loading,
     error,
-    verified,
-    clientName,
   } = useReviewVerification();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    await verify(code);
+  }
+
+  useEffect(() => {
+    if (verified && client) {
+      onVerified({
+        code,
+        client,
+      });
+    }
+  }, [verified, client, code, onVerified]);
 
   return (
     <section className="review-verification">
@@ -20,59 +32,64 @@ export default function ReviewVerification() {
       <h2>Leave a Verified Review</h2>
 
       <p>
-        Every testimonial on Luncy Corner comes from a verified client.
-        Enter your review code below to unlock the review form.
+        Every testimonial displayed here comes from a verified client.
+        Enter your unique review code to unlock the review form and
+        share your experience working with Luncy Corner.
       </p>
 
-     {!verified ? (
+      <form
+        className="verify-box"
+        onSubmit={handleSubmit}
+      >
 
-  <div className="verify-box">
+        <input
+          type="text"
+          placeholder="LC-XXXX-XXXX"
+          value={code}
+          onChange={(e) =>
+            setCode(e.target.value.toUpperCase())
+          }
+          required
+        />
 
-    <input
-      type="text"
-      placeholder="LUNCY-XXXX-XXXX"
-      value={code}
-      onChange={(e) => setCode(e.target.value.toUpperCase())}
-    />
+        <button
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Verifying..." : "Verify Code"}
+        </button>
 
-    <button
-      onClick={verify}
-      disabled={loading}
-    >
-      {loading ? "Verifying..." : "Verify"}
-    </button>
+      </form>
 
-  </div>
+      {verified && client && (
 
-) : (
+        <div className="verified-box">
 
-  <>
+          <div className="verified-icon">
+            ✓
+          </div>
 
-    <div className="verified-box">
+          <h3>
+            Welcome, {client.clientName}
+          </h3>
 
-      <div className="verified-icon">
-        ✓
-      </div>
+          <p>
+            Your review code has been successfully verified.
+            You can now continue and submit your testimonial.
+          </p>
 
-      <h3>
-        Welcome, {clientName}
-      </h3>
+        </div>
 
-      <p>
-        Your review code has been verified.
-      </p>
+      )}
 
-    </div>
+      {error && (
 
-    <TestimonialForm
-      clientName={clientName}
-      code={code}
-    />
+        <div className="error">
+          {error}
+        </div>
 
-  </>
+      )}
 
-)}
     </section>
   );
-
 }

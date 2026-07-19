@@ -11,29 +11,29 @@ export default function useTestimonials() {
 
     useEffect(() => {
 
-        async function loadTestimonials() {
-
-            try {
-
-                const data = await getTestimonials();
-
-                setTestimonials(data);
-
-            } catch (err) {
-
-                setError(err.message);
-
-            } finally {
-
-                setLoading(false);
-
-            }
-
-        }
-
         loadTestimonials();
 
     }, []);
+
+    async function loadTestimonials() {
+
+        try {
+
+            const data = await getTestimonials();
+
+            setTestimonials(data);
+
+        } catch (err) {
+
+            setError(err.message);
+
+        } finally {
+
+            setLoading(false);
+
+        }
+
+    }
 
     return {
 
@@ -41,7 +41,9 @@ export default function useTestimonials() {
 
         loading,
 
-        error
+        error,
+
+        refresh: loadTestimonials
 
     };
 

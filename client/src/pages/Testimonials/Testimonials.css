@@ -1,0 +1,280 @@
+/* ==========================================
+   TESTIMONIALS PAGE
+   Luxury Korean Editorial Style
+========================================== */
+
+.testimonials-page{
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(180deg,#FBFBFB 0%,#FDFBF9 100%);
+    min-height:100vh;
+    padding-bottom:180px;
+}
+
+/* Decorative Background */
+
+.testimonials-page::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:#F7EEF2;
+    filter:blur(120px);
+    top:-250px;
+    left:-180px;
+    opacity:.55;
+    z-index:0;
+}
+
+.testimonials-page::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:#EDF6FC;
+    filter:blur(120px);
+    bottom:-250px;
+    right:-200px;
+    opacity:.6;
+    z-index:0;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.testimonials-container{
+
+    position:relative;
+    z-index:2;
+
+    width:min(1180px,92%);
+    margin:auto;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.testimonial-hero{
+
+    padding:140px 0 110px;
+
+    text-align:center;
+
+}
+
+.testimonial-hero span{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:11px 28px;
+
+    border-radius:999px;
+
+    background:#F8EEF3;
+
+    color:#6E5950;
+
+    font-size:13px;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+    margin-bottom:32px;
+
+    font-weight:600;
+
+}
+
+.testimonial-hero h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:74px;
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    color:#2F2724;
+
+    max-width:900px;
+
+    margin:auto;
+
+    margin-bottom:28px;
+
+}
+
+.testimonial-hero p{
+
+    max-width:670px;
+
+    margin:auto;
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#857F7A;
+
+}
+
+/* Decorative Divider */
+
+.hero-divider{
+
+    width:90px;
+
+    height:2px;
+
+    background:#C9B08E;
+
+    margin:55px auto 0;
+
+    border-radius:999px;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:54px;
+
+    font-weight:500;
+
+    margin-bottom:16px;
+
+    color:#2C2523;
+
+}
+
+.section-heading p{
+
+    max-width:620px;
+
+    margin:auto;
+
+    color:#8C8580;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+.testimonials-section{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:80px;
+
+}
+
+.review-section{
+
+    margin-top:150px;
+
+}
+
+/* ==========================================
+   SMOOTH ANIMATION
+========================================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   SOFT FLOATING SHAPES
+========================================== */
+
+.blur-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+}
+
+.blur-pink{
+
+    width:220px;
+
+    height:220px;
+
+    background:#F8E9EF;
+
+    top:420px;
+
+    left:-60px;
+
+}
+
+.blur-blue{
+
+    width:250px;
+
+    height:250px;
+
+    background:#EAF5FD;
+
+    bottom:220px;
+
+    right:-70px;
+
+}
+

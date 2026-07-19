@@ -1,63 +1,85 @@
 import mongoose from "mongoose";
 
 const projectSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-      trim: true,
+{
+    title:{
+        type:String,
+        required:true,
+        trim:true
     },
 
-    slug: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true,
+    slug:{
+        type:String,
+        required:true,
+        unique:true,
+        trim:true,
+        lowercase:true
     },
 
-    category: {
-      type: String,
-      required: true,
-      trim: true,
+    category:{
+        type:String,
+        required:true,
+        enum:[
+            "Brand Identity",
+            "Social Media",
+            "Poster Design",
+            "UI Design",
+            "Creative"
+        ]
     },
 
-    description: {
-      type: String,
-      required: true,
-      trim: true,
+    shortDescription:{
+        type:String,
+        required:true,
+        maxlength:180
     },
 
-    thumbnail: {
-      type: String,
-      required: true,
+    fullDescription:{
+        type:String,
+        required:true
     },
 
-    gallery: {
-      type: [String],
-      default: [],
+    thumbnail:{
+        type:String,
+        required:true
     },
 
-    tools: {
-      type: [String],
-      default: [],
+    coverImage:{
+        type:String,
+        required:true
     },
 
-    year: {
-      type: Number,
-      required: true,
+    gallery:[String],
+
+    colors:[String],
+
+    fonts:[String],
+
+    tools:[String],
+
+    featured:{
+        type:Boolean,
+        default:false
     },
 
-    featured: {
-      type: Boolean,
-      default: false,
+    liveLink:{
+        type:String,
+        default:""
     },
-  },
-  {
-    timestamps: true,
-  }
-);
 
-const Project = mongoose.model("Project", projectSchema);
+    behanceLink:{
+        type:String,
+        default:""
+    },
 
-export default Project;
+    githubLink:{
+        type:String,
+        default:""
+    }
+
+},
+{
+    timestamps:true
+});
+
+export default mongoose.model("Project",projectSchema);

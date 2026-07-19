@@ -6,35 +6,35 @@
        PRIMARY COLORS
     ========================== */
 
-    --bg:#FCF9F7;
+    --bg:#FCFAF8;
     --surface:#FFFFFF;
 
     /* =========================
        TEXT
     ========================== */
 
-    --text:#312B2A;
-    --text-light:#6F6967;
+    --text:#2F2B2A;
+    --text-light:#766F6C;
     --text-soft:#9A9491;
 
     /* =========================
        ACCENT COLORS
     ========================== */
 
-    --pink:#F6E5EB;
-    --pink-light:#FCF3F6;
+    --pink:#F8E4EA;
+    --pink-light:#FFF6F8;
 
-    --blue:#E5EFF9;
-    --blue-light:#F3F8FD;
+    --blue:#E5F1FB;
+    --blue-light:#F7FBFF;
 
-    --coffee:#5A4742;
+    --coffee:#5B4843;
     --coffee-light:#8A746D;
 
     /* =========================
        BORDERS
     ========================== */
 
-    --border:#ECE6E2;
+    --border:#ECE8E4;
     --border-light:#F4EFEB;
 
     /* =========================

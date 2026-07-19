@@ -1,0 +1,13 @@
+.nav-links a {
+    color: var(--gray);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--coffee);
+}
+
+.nav-links a.active {
+    color: var(--coffee);
+    font-weight: 600;
+}

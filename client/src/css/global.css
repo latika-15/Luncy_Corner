@@ -1,0 +1,84 @@
+/* ===========================
+   IMPORTS
+=========================== */
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./animations.css";
+
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--coffee);
+
+    line-height: 1.6;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--coffee);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Paragraphs */
+p {
+    color: var(--gray);
+}
+
+/* Buttons */
+button,
+.btn {
+    font-family: var(--font-button);
+    transition: var(--transition);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+}
+
+/* Selection color */
+::selection {
+    background: var(--pink);
+    color: var(--coffee);
+}
+
+/* Scrollbar (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #efc9d4;
+}
